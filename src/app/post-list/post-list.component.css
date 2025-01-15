@@ -1,0 +1,30 @@
+:host {
+    display: block;
+    margin-top: 1rem;
+}
+.info-text {
+    text-align: center;
+}
+.edit-input{
+    display: flex;
+    flex-direction: column;
+}
+.update-button{
+    display: flex;
+}
+.pagination{
+    margin:10px 10px 10px 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+   
+
+}
+.page-item{
+    margin-right: 10px;
+}
+.page-num{
+    border-radius: 50%;
+    color:#000000;
+    margin-left: 5px;
+}

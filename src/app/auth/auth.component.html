@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="wrapper" *ngIf="isSignInMode">
+      <h2>Sign In</h2>
+   
+        <div class="input-box">
+          <input form-control="email" type="email" class="form-control" [(ngModel)]="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <input type="password" class="form-control" [(ngModel)]="password" placeholder="Enter your password" required>
+        </div>
+        <div class="input-box button">
+         <button class="btn btn-primary" (click)="login()">Login</button>
+        </div>
+        <div class="text">
+          <h3>Don't have an account? <a routerLink="/auth" (click)="switchMode()">Register now</a></h3>
+        </div>
+      
+    </div>
+    
+    
+    <div class="wrapper" *ngIf="!isSignInMode">
+      <h2>Sign Up</h2>
+    
+        <div class="input-box">
+          <input type="email" [(ngModel)]="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <input  type="password"  [(ngModel)]="password" placeholder="Create password" required>
+        </div>
+        <div class="input-box button">
+            <button class="btn btn-primary" (click)="register()">Register</button>
+        </div>
+        <div class="text">
+          <h3>Already have an account? <a routerLink="/auth" (click)="switchMode()">Login now</a></h3>
+        </div>
+
+    </div>
+    </div>
